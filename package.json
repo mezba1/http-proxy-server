@@ -1,0 +1,22 @@
+{
+  "name": "cors-proxy-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mezbaul Haque <mezba109@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "helmet": "^3.21.2",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "pm2": "^4.2.1"
+  },
+  "scripts": {
+    "dev": "nodemon app.js",
+    "pm2:restart": "pm2 restart all",
+    "pm2:start": "NODE_ENV=production pm2 start app.js",
+    "pm2:stop": "pm2 stop all"
+  }
+}
