@@ -1,25 +1,44 @@
 {
   "name": "@mezba1/http-proxy",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "Mezbaul Haque <mezba109@gmail.com>",
   "license": "MIT",
   "engines": {
     "node": "12.16"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "debug": "^4.1.1",
     "express": "^4.17.1",
     "helmet": "^3.21.2",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "yup": "^0.29.1"
   },
   "devDependencies": {
+    "eslint": "^7.3.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "nodemon": "^2.0.2",
-    "pm2": "^4.2.1"
+    "pm2": "^4.2.1",
+    "prettier": "^2.0.5"
   },
   "scripts": {
-    "dev": "nodemon app.js",
+    "dev": "nodemon",
+    "start": "node ./bin/www.js",
     "pm2:restart": "pm2 restart all",
     "pm2:start": "NODE_ENV=production pm2 start app.js",
     "pm2:stop": "pm2 stop all"
+  },
+  "lint-staged": {
+    "src/**/*.{js,md}": [
+      "prettier --write"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   }
 }
