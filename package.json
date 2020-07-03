@@ -1,9 +1,12 @@
 {
-  "name": "cors-proxy-server",
+  "name": "@mezba1/http-proxy",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Mezbaul Haque <mezba109@gmail.com>",
   "license": "MIT",
+  "engines": {
+    "node": "12.16"
+  },
   "dependencies": {
     "express": "^4.17.1",
     "helmet": "^3.21.2",
