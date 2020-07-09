@@ -1,22 +1,30 @@
 {
-  "name": "cors-proxy-server",
-  "version": "1.0.0",
+  "name": "@mezba1/http-proxy-server",
+  "version": "0.0.1",
   "main": "index.js",
+  "repository": "git@github.com:mezba1/http-proxy-server.git",
   "author": "Mezbaul Haque <mezba109@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "express": "^4.17.1",
-    "helmet": "^3.21.2",
-    "request": "^2.88.0"
+  "scripts": {
+    "start:dev": "nodemon",
+    "start": "node index.js",
+    "lint": "eslint . --ext .js --ignore-path .gitignore",
+    "lintfix": "eslint . --ext .js --ignore-path .gitignore --fix"
   },
   "devDependencies": {
-    "nodemon": "^2.0.2",
-    "pm2": "^4.2.1"
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5"
   },
-  "scripts": {
-    "dev": "nodemon app.js",
-    "pm2:restart": "pm2 restart all",
-    "pm2:start": "NODE_ENV=production pm2 start app.js",
-    "pm2:stop": "pm2 stop all"
+  "dependencies": {
+    "@hapi/joi": "^17.1.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
+  },
+  "engines": {
+    "node": "12.16.3"
   }
 }

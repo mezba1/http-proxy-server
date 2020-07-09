@@ -1,1 +1,1 @@
-# CORS Proxy Server
+# Simple HTTP Proxy Server
