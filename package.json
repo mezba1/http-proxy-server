@@ -1,8 +1,8 @@
 {
-  "name": "http-proxy",
-  "version": "1.0.0",
+  "name": "@mezba1/http-proxy-server",
+  "version": "0.0.1",
   "main": "index.js",
-  "repository": "git@github.com:mezba1/http-proxy.git",
+  "repository": "git@github.com:mezba1/http-proxy-server.git",
   "author": "Mezbaul Haque <mezba109@gmail.com>",
   "license": "MIT",
   "scripts": {
