@@ -5,7 +5,9 @@
     "js": "node --harmony"
   },
   "watch": [
-    "src/*"
+    "src/*",
+    "config.js",
+    "index.js"
   ],
   "env": {
     "NODE_ENV": "development",
